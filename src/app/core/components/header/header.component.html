@@ -1,0 +1,16 @@
+<header class="h-[75px] flex items-center justify-between px-6 z-10 bg-gray-800 sticky top-0">
+  <img class="cursor-pointer" width="150" height="150" src="img/pngwing.com.png" alt="" />
+  <nav class="hidden md:flex gap-8 justify-center ">
+    @for (item of navList; track $index) {
+    <p class="cursor-pointer hover:text-white text-neutral-300">{{ item }}</p>
+    }
+  </nav>
+  <div class="hidden md:flex gap-2 text-white">
+    <div class="justify-center items-center flex gap-2">
+      <img width="25" height="20" class="rounded-full" [src]="profileImg()" alt="">
+      <p>Welcome user</p>
+    </div>
+    <p>|</p>
+    <p class="cursor-pointer hover:text-red-400" (click)="signOut()">signout</p>
+  </div>
+</header>
