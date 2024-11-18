@@ -1,4 +1,4 @@
-import { Component, inject, input } from '@angular/core';
+import { Component, inject, Input, input } from '@angular/core';
 import { AuthService } from '@shared/services/auth.service';
 
 @Component({
@@ -11,7 +11,9 @@ import { AuthService } from '@shared/services/auth.service';
 export class HeaderComponent {
   auth = inject(AuthService);
 
-  profileImg = input<String>();
+  profileImg:any = input<String>();
+  name:any = input<String>();
+
   navList = [
     'Home',
     'TV Shows',
@@ -19,7 +21,6 @@ export class HeaderComponent {
     'My List',
     'Browse By Language',
   ];
-
 
   async signOut() {
     this.auth.signOut()

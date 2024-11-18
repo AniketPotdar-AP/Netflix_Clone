@@ -1,22 +1,25 @@
-<div class="relative h-screen">
-  <iframe class="h-full w-full absolute top-0 left-0"
-    src="https://www.youtube.com/embed/r588USiDBMc?autoplay=1&loop=1&mute=1&controls=0" frameborder="0">
+<div class="relative md:h-screen h-[30rem]">
+  <iframe class="h-full w-full absolute top-0 left-0" [src]="videoUrl" frameborder="0">
   </iframe>
 
+  @if (bannerTitle) {
   <div
-    class="absolute inset-0 bg-gradient-to-r from-black to-transparent text-white flex flex-col justify-center px-24">
-    <h1 class="text-5xl font-bold">Pushpa 2 : The Rule</h1>
-    <p class="py-6 text-lg w-2/4">
-      The clash is on as Pushpa and Bhanwar Singh continue their rivalry in this
-      epic conclusion to the two-parted action drama.
+    class="absolute inset-0 gap-5 bg-gradient-to-r from-black to-transparent text-white flex flex-col justify-center md:px-24 px-10">
+    <h1 class="md:text-5xl text-xl font-bold">
+      {{ bannerTitle }}
+    </h1>
+    <p class="md:text-lg text-sm md:w-2/4 w-5/6 leading-6 line-clamp-4">
+      {{ bannerOverview }}
     </p>
-    <div class="flex md:flex-row flex-col gap-4">
-      <button class="bg-white text-black hover:opacity-80 py-2 px-12 text-lg rounded-xl">
+    <div class="flex flex-row gap-4 font-semibold">
+      <button
+        class="bg-white md:w-1/6 w-3/6 text-black hover:opacity-80 py-2 md:px-12 px-2 md:text-lg text-xs rounded-xl">
         ▶ Play
       </button>
-      <button class="bg-gray-500 text-white py-2 px-12 text-lg rounded-xl">
+      <button class="bg-gray-500 md:w-1/6 w-3/6 text-white py-2 md:px-12 px-2 md:text-lg text-xs rounded-xl">
         More Info
       </button>
     </div>
   </div>
+  }
 </div>

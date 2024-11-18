@@ -1,6 +1,11 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA, inject, OnInit } from '@angular/core';
-import { MovieService } from '@shared/services/movie.service';
-import { ImagePipe } from "@shared/pipes/image.pipe";
+import {
+  Component,
+  CUSTOM_ELEMENTS_SCHEMA,
+  Input,
+  OnInit,
+} from '@angular/core';
+import { ImagePipe } from '@shared/pipes/image.pipe';
+import { IVideoContent } from '@shared/model/video-content.interface';
 
 @Component({
   selector: 'app-movie-carousel',
@@ -8,23 +13,30 @@ import { ImagePipe } from "@shared/pipes/image.pipe";
   imports: [ImagePipe],
   templateUrl: './movie-carousel.component.html',
   styleUrl: './movie-carousel.component.scss',
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class MovieCarouselComponent implements OnInit {
+  @Input() videoContents: IVideoContent[] = [];
+  @Input() Title: any;
 
-  movieService = inject(MovieService)
-  movieList: any
+  breakpoints = {
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+    1024: {
+      slidesPerView: 4,
+      spaceBetween: 50,
+    },
+    1440: {
+      slidesPerView: 5,
+      spaceBetween: 50,
+    },
+  };
 
-  ngOnInit(): void {
-    this.movieService.getMovies().subscribe((res) => {
-      if (res) {
-        this.movieList = res.results
-        console.log(res);
-
-      }
-    }, (err) => {
-      console.log(err);
-    })
-  }
-
+  ngOnInit(): void { }
 }

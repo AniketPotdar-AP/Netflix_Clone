@@ -8,7 +8,7 @@
   <div class="hidden md:flex gap-2 text-white">
     <div class="justify-center items-center flex gap-2">
       <img width="25" height="20" class="rounded-full" [src]="profileImg()" alt="">
-      <p>Welcome user</p>
+      <p class="w-4/5 truncate">Welcome {{name()}}</p>
     </div>
     <p>|</p>
     <p class="cursor-pointer hover:text-red-400" (click)="signOut()">signout</p>

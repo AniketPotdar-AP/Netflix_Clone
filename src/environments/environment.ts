@@ -1,3 +1,4 @@
 export const environment = {
-  clientID: '835947696329-f5j15oraioblgr5c6i3hsvcmrgldc0ds.apps.googleusercontent.com'
+  clientID: '835947696329-f5j15oraioblgr5c6i3hsvcmrgldc0ds.apps.googleusercontent.com',
+  TMDBToken: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhM2NmZWQyMjNhYWIwMzY3ZTVkMmY1YjExYWQ5ZTI0MiIsIm5iZiI6MTczMTg1ODAwMi43MzA1MDI0LCJzdWIiOiI2NzNhMGQxNDIwOWQ0M2ZiZmIzNDg1MzgiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.jMO9fuhBnkgbHSEO9lxezD0mmICfyvxTcYxS72-JDfY'
 };
