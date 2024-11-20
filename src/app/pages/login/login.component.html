@@ -1,11 +1,19 @@
-<div class="absolute w-full h-full">
-  <img class="w-full h-full"
+<div class="relative w-full h-screen">
+  <!-- Background Image -->
+  <img class="absolute top-0 left-0 w-full h-full object-cover"
     src="https://assets.nflxext.com/ffe/siteui/vlv3/dace47b4-a5cb-4368-80fe-c26f3e77d540/becb4b4a-fa87-47ab-b92b-aae2c1c6d6f7/SG-en-20231023-popsignuptwoweeks-perspective_alpha_website_small.jpg"
-    alt="" />
-</div>
+    alt="StreamAura background image" />
 
-<div
-  class="w-full flex flex-col items-center md:w-5/12 absolute right-0 left-0 p-12 bg-black my-36 mx-auto text-white rounded-lg bg-opacity-80">
-  <h1 class="font-bold text-3xl py-4">Netflix Sign In</h1>
-  <div id="google-btn"></div>
+  <div class="absolute inset-0 flex items-center justify-center px-4">
+    <div class="w-full max-w-sm bg-black bg-opacity-80 text-white rounded-lg p-6 shadow-lg">
+      <h1 class="text-2xl sm:text-3xl font-bold text-center mb-4">
+        StreamAura Sign In
+      </h1>
+      <div id="google-btn" class="mt-4">
+        <button class="w-full px-4 py-2 bg-red-600 rounded-lg hover:bg-red-700 transition-all text-sm sm:text-base">
+          Sign in with Google
+        </button>
+      </div>
+    </div>
+  </div>
 </div>

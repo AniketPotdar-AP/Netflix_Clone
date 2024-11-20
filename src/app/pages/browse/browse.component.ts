@@ -15,7 +15,12 @@ import { forkJoin, map, Observable } from 'rxjs';
 @Component({
   selector: 'app-browse',
   standalone: true,
-  imports: [HeaderComponent, BannerComponent, MovieCarouselComponent, CommonModule],
+  imports: [
+    HeaderComponent,
+    BannerComponent,
+    MovieCarouselComponent,
+    CommonModule,
+  ],
   templateUrl: './browse.component.html',
   styleUrl: './browse.component.scss',
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
@@ -55,8 +60,12 @@ export class BrowseComponent implements OnInit {
             topRatedMovies,
             upcomingMovies,
           ]) => {
-            this.bannerDetail$ = this.movieService.getBannerDetail(movies.results[0].id);
-            this.bannerVideo$ = this.movieService.getBannerVideo(movies.results[0].id);
+            this.bannerDetail$ = this.movieService.getBannerDetail(
+              movies.results[0].id
+            );
+            this.bannerVideo$ = this.movieService.getBannerVideo(
+              movies.results[0].id
+            );
             return {
               movies,
               tvShows,
@@ -81,8 +90,6 @@ export class BrowseComponent implements OnInit {
   }
 
   getMovieKey() {
-    this.movieService.getBannerVideo(this.movies[0].id).subscribe((res) => {
-      console.log(res);
-    });
+    this.movieService.getBannerVideo(this.movies[0].id).subscribe((res) => {});
   }
 }

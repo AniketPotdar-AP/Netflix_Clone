@@ -1,7 +1,7 @@
 <app-header [profileImg]="profileImg" [name]="name" />
 <app-banner [bannerTitle]="(bannerDetail$ | async)?.original_title" [bannerOverview]="(bannerDetail$ | async)?.overview"
   [key]="(bannerVideo$ | async)?.results[0].key" />
-<app-movie-carousel [Title]="'Popular On Netflix'" [videoContents]="movies" />
+<app-movie-carousel [Title]="'Popular On StreamAura'" [videoContents]="movies" />
 <app-movie-carousel [Title]="'Trending TV Shows'" [videoContents]="tvShows" />
 <app-movie-carousel [Title]="'Now Playing Movies'" [videoContents]="nowPlayingMovies" />
 <app-movie-carousel [Title]="'Popular Movies'" [videoContents]="popularMovies" />
